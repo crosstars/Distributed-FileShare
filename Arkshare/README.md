@@ -29,6 +29,7 @@ configure the server by editing configure.py
 #### run
 first run the _server.py_ , then run the _client.py_ .
 the list of numbers printed are the _book names (numbers)_.
+client have an interactive menu to guide the user.
 server and client will reflect location changes.
 ### Sample output
 
