@@ -76,6 +76,26 @@ b'\x80\x04\x95/\x00\x00\x00\x00\x00\x00\x00]\x94(\x8c\x05#@REG\x94]\x94(\x8c\x03
 ```
 the server prints its data whenever any operation is made
 
+now the client when run
+```
+('127.0.0.1', 53046)
+None
+registered successfully with id 5
+['164', '144', '233', '132', '297']
+
+Operations:
+1. Query Book
+2. print library
+3. QUIT
+(Enter choice):
+
+```
+now when a book is searched 3 casees are possible:
+(1) book is in client's own library
+(2) book is in anothers clients library 
+(3) book is not available anywhere
+server
+ 
 ### Testing 
 mannually tested with 1 server and 5 clients in default configuration.
 
