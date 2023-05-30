@@ -92,9 +92,80 @@ Operations:
 ```
 now when a book is searched 3 casees are possible:
 (1) book is in client's own library
+*call to server is not made in this case 
+```
+1. Query Book
+2. print library
+3. QUIT
+(Enter choice):1
+enter the book name164
+file already in your folder
+['164', '144', '233', '132', '297']
+```
+
 (2) book is in anothers clients library 
+* server
+```
+['#@SEARCH', '195']
+{(1, '127.0.0.1', 41931): ['162', '195', '286', '190', '226'], (2, '127.0.0.1', 51095): ['96', '187', '205', '244', '186'], (3, '127.0.0.1', 51097): ['70', '283', '14', '99', '296'], (4, '127.0.0.1', 51103): ['53', '5', '280', '277', '135'], (5, '127.0.0.1', 53047): ['164', '144', '233', '132', '297']}
+b'\x80\x04\x95$\x00\x00\x00\x00\x00\x00\x00]\x94(\x8c\x05#@UPD\x94K\x05\x8c\t127.0.0.1\x94M\xcb\xa3\x8c\x03195\x94e.'
+['#@UPD', 5, '127.0.0.1', 41931, '195']
+{(1, '127.0.0.1', 41931): ['162', '286', '190', '226'], (2, '127.0.0.1', 51095): ['96', '187', '205', '244', '186'], (3, '127.0.0.1', 51097): ['70', '283', '14', '99', '296'], (4, '127.0.0.1', 51103): ['53', '5', '280', '277', '135'], (5, '127.0.0.1', 53047): ['164', '144', '233', '132', '297', '195']}
+
+```
+* client peer
+```
+['164', '144', '233', '132', '297']
+
+Operations:
+1. Query Book
+2. print library
+3. QUIT
+(Enter choice):1       
+enter the book name 195
+[(1, '127.0.0.1', 41931)]
+book found in peer 1 want to download (y for yes )y
+51
+receiving data...
+recived the data
+['164', '144', '233', '132', '297', '195']
+
+```
+* server peer
+```
+('127.0.0.1', 41930)
+None
+registered successfully with id 1
+['162', '195', '286', '190', '226']
+
+Operations:
+1. Query Book
+2. print library
+3. QUIT
+(Enter choice):    
+ Accepted connection from ('127.0.0.1', 60188) ---
+
+done sending
+['162', '286', '190', '226']
+
+```
+
+
 (3) book is not available anywhere
-server
+* server
+```
+['#@SEARCH', '234']
+{(1, '127.0.0.1', 41931): ['162', '195', '286', '190', '226'], (2, '127.0.0.1', 51095): ['96', '187', '205', '244', '186'], (3, '127.0.0.1', 51097): ['70', '283', '14', '99', '296'], (4, '127.0.0.1', 51103): ['53', '5', '280', '277', '135'], (5, '127.0.0.1', 53047): ['164', '144', '233', '132', '297']}
+```
+* client
+```
+(Enter choice):1
+enter the book name 234
+[None]
+book 234  not found
+['164', '144', '233', '132', '297']
+
+```
  
 ### Testing 
 mannually tested with 1 server and 5 clients in default configuration.
