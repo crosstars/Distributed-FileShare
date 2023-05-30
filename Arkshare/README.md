@@ -28,7 +28,7 @@ sending real book files are not implimented , it is simulated by list elements ,
 configure the server by editing configure.py
 #### run
 first run the _server.py_ , then run the _client.py_ .
-the list of numbers printed are the book numbers.
+the list of numbers printed are the _book names (numbers)_.
 server and client will reflect location changes.
 ### Sample output
 
