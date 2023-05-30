@@ -92,7 +92,8 @@ Operations:
 ```
 now when a book is searched 3 casees are possible:
 (1) book is in client's own library
-*call to server is not made in this case 
+
+**call to server is not made in this case** 
 ```
 1. Query Book
 2. print library
@@ -165,6 +166,37 @@ enter the book name 234
 book 234  not found
 ['164', '144', '233', '132', '297']
 
+```
+print client
+```
+Operations:
+1. Query Book
+2. print library
+3. QUIT
+(Enter choice):2
+['164', '144', '233', '132', '297', '195']
+['164', '144', '233', '132', '297', '195']
+```
+
+Quit
+
+* client
+```
+Operations:
+1. Query Book
+2. print library
+3. QUIT
+(Enter choice):3
+--- Connection with Server closed ---
+['164', '144', '233', '132', '297', '195']
+```
+
+* server
+```
+{(1, '127.0.0.1', 41931): ['162', '286', '190', '226'], (2, '127.0.0.1', 51095): ['96', '187', '205', '244', '186'], (3, '127.0.0.1', 51097): ['70', '283', '14', '99', '296'], (4, '127.0.0.1', 51103): ['53', '5', '280', '277', '135'], (5, '127.0.0.1', 53047): ['164', '144', '233', '132', '297', '195']}
+b'\x80\x04\x95\r\x00\x00\x00\x00\x00\x00\x00]\x94\x8c\x06#@QUIT\x94a.'
+['#@QUIT']
+{(1, '127.0.0.1', 41931): ['162', '286', '190', '226'], (2, '127.0.0.1', 51095): ['96', '187', '205', '244', '186'], (3, '127.0.0.1', 51097): ['70', '283', '14', '99', '296'], (4, '127.0.0.1', 51103): ['53', '5', '280', '277', '135']}
 ```
  
 ### Testing 
