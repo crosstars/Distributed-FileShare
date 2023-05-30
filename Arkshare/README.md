@@ -23,15 +23,15 @@ Major function of the peer: Register and Listen to clients that wants to downloa
 
 ## Limitations
 sending real book files are not implimented , it is simulated by list elements , book names are random integer strings , book contents list element is returned as file eklements {the extraa folder filer.py will take care of these operations , these are not implimented}
-### How-to
-##### configuration
+## How-to
+### configuration
 configure the server by editing configure.py
-#### run
+### run
 first run the _server.py_ , then run the _client.py_ .
 the list of numbers printed are the _book names (numbers)_.
 client have an interactive menu to guide the user.
 server and client will reflect book location changes.
-### Sample output
+## Sample output
 running the server , then the client will automatically register to the running server
 the server reciving the connections :
 ```
