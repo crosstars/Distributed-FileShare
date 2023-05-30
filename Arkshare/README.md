@@ -30,8 +30,51 @@ configure the server by editing configure.py
 first run the _server.py_ , then run the _client.py_ .
 the list of numbers printed are the _book names (numbers)_.
 client have an interactive menu to guide the user.
-server and client will reflect location changes.
+server and client will reflect book location changes.
 ### Sample output
+running the server , then the client will automatically register to the running server
+the server reciving the connections :
+```
+started
+looping 0
+connection from ('127.0.0.1', 41930)
+--- Active Connections : 1 ---
+
+looping 0
+b'\x80\x04\x95/\x00\x00\x00\x00\x00\x00\x00]\x94(\x8c\x05#@REG\x94]\x94(\x8c\x03162\x94\x8c\x03195\x94\x8c\x03286\x94\x8c\x03190\x94\x8c\x03226\x94ee.'
+['#@REG', ['162', '195', '286', '190', '226']]
+{(1, '127.0.0.1', 41931): ['162', '195', '286', '190', '226']}
+connection from ('127.0.0.1', 51094)
+b'\x80\x04\x95.\x00\x00\x00\x00\x00\x00\x00]\x94(\x8c\x05#@REG\x94]\x94(\x8c\x0296\x94\x8c\x03187\x94\x8c\x03205\x94\x8c\x03244\x94\x8c\x03186\x94ee.'
+--- Active Connections : 2 ---
+['#@REG', ['96', '187', '205', '244', '186']]
+
+looping 0
+{(1, '127.0.0.1', 41931): ['162', '195', '286', '190', '226'], (2, '127.0.0.1', 51095): ['96', '187', '205', '244', '186']}
+connection from ('127.0.0.1', 51096)
+b'\x80\x04\x95,\x00\x00\x00\x00\x00\x00\x00]\x94(\x8c\x05#@REG\x94]\x94(\x8c\x0270\x94\x8c\x03283\x94\x8c\x0214\x94\x8c\x0299\x94\x8c\x03296\x94ee.'
+--- Active Connections : 3 ---
+['#@REG', ['70', '283', '14', '99', '296']]
+
+looping 0
+{(1, '127.0.0.1', 41931): ['162', '195', '286', '190', '226'], (2, '127.0.0.1', 51095): ['96', '187', '205', '244', '186'], (3, '127.0.0.1', 51097): ['70', '283', '14', '99', '296']}
+connection from ('127.0.0.1', 51102)
+--- Active Connections : 4 ---
+
+looping 0
+b'\x80\x04\x95,\x00\x00\x00\x00\x00\x00\x00]\x94(\x8c\x05#@REG\x94]\x94(\x8c\x0253\x94\x8c\x015\x94\x8c\x03280\x94\x8c\x03277\x94\x8c\x03135\x94ee.'
+['#@REG', ['53', '5', '280', '277', '135']]
+{(1, '127.0.0.1', 41931): ['162', '195', '286', '190', '226'], (2, '127.0.0.1', 51095): ['96', '187', '205', '244', '186'], (3, '127.0.0.1', 51097): ['70', '283', '14', '99', '296'], (4, '127.0.0.1', 51103): ['53', '5', '280', '277', '135']}
+connection from ('127.0.0.1', 53046)
+--- Active Connections : 5 ---
+
+looping 0
+b'\x80\x04\x95/\x00\x00\x00\x00\x00\x00\x00]\x94(\x8c\x05#@REG\x94]\x94(\x8c\x03164\x94\x8c\x03144\x94\x8c\x03233\x94\x8c\x03132\x94\x8c\x03297\x94ee.'
+['#@REG', ['164', '144', '233', '132', '297']]
+{(1, '127.0.0.1', 41931): ['162', '195', '286', '190', '226'], (2, '127.0.0.1', 51095): ['96', '187', '205', '244', '186'], (3, '127.0.0.1', 51097): ['70', '283', '14', '99', '296'], (4, '127.0.0.1', 51103): ['53', '5', '280', '277', '135'], (5, '127.0.0.1', 53047): ['164', '144', '233', '132', '297']}
+
+```
+the server prints its data whenever any operation is made
 
 ### Testing 
 mannually tested with 1 server and 5 clients in default configuration.
