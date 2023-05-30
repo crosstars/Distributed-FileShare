@@ -13,7 +13,6 @@ There are two types of peer pointers
 1. Successor - Predecessor
 2. Finger table
 
-![Successor-Predecessor](images/successor_pred.png)
 
 
 
@@ -22,7 +21,7 @@ To avoid the linear search, Chord implements a faster search method by requiring
 
 
 
-![Finger Table](images/finger_table.png)
+
 
 
 
@@ -92,4 +91,4 @@ The client is menu driven where we need to provide inputs like the port number o
 The test.sh script is used to test the working of the code 
 The script spawns 3 different nodes and performs insert and search operations on those nodes.
 
-Link to video for Chord explanation and code run : https://youtu.be/2rNEjQCpFCo
+
