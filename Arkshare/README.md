@@ -20,15 +20,17 @@ Indexing server indexes the content of all peers  using dictionary with a key  (
 
 ### Peer
 Major function of the peer: Register and Listen to clients that wants to download . Search for a filename and ask to download it. Firstly, as a client, user can request a file name to the indexing server. The indexing server returns a peer data whcih shares this file with all of its details. The user then connects to this peer and downloads the file. Secondly, as a server,the peer waits for requests from other peers and sends the requested file when receiving a request. So peers here, act as both the client and the server. This server is different from the central index server which only indexes the files. But, the server functionality of the peer can be used to download the files from its directory. The peer also acts as a client to download the files from other peers into its directory.
+
 ## Limitations
 sending real book files are not implimented , it is simulated by list elements , book names are random integer strings , book contents list element is returned as file eklements {the extraa folder filer.py will take care of these operations , these are not implimented}
 ### How-to
 ##### configuration
 configure the server by editing configure.py
-##run
+#### run
 first run the _server.py_ , then run the _client.py_ .
 the list of numbers printed are the book numbers.
 server and client will reflect location changes.
+### Sample output
 
 ### Testing 
 mannually tested with 1 server and 5 clients in default configuration.
